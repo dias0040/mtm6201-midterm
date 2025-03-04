@@ -7,7 +7,9 @@
     text-decoration: none;
     max-width: 100%;
 }
-
+.skip-link {
+    display: none;
+}
 .off-screen-menu a {
     color: #222;
 }
@@ -449,6 +451,9 @@ h2 {
 /* Media Query for Tablets */
 @media (min-width: 600px) and (max-width: 850px) {
     /* Hero Text */
+    .skip-link {
+        display: none;
+    }
     .onscreen {
         display: none;
     }
