@@ -860,6 +860,34 @@ h2 {
 /* Media Query for Desktop */
 @media (min-width: 1025px)  {
 
+    /* Basic skip link styling */
+.skip-link {
+    position: fixed;
+    top: 42rem;
+    right: 3rem;
+    background-color: #d0d0d0d1;
+    color: rgb(48, 48, 48);
+    padding: 15px 15px;
+    border-radius: 40px;
+    font-size: 20px;
+    z-index: 1000; /* Make sure it stays on top of other content */
+    text-decoration: none;
+    display: block;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Hide the skip link by default */
+  .skip-link:focus {
+    background-color: #121212; /* Change color on focus for better accessibility */
+    color: #ffffff;
+  }
+  
+  /* Show the skip link when it's focused (i.e., it gets activated by a keyboard user) */
+  .skip-link:focus {
+    display: block;
+  }
+
+
     .logo {
         margin: 1rem;
     }
