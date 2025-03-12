@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    max-width: 100%;
+}
+.skip-link {
+    display: none;
+}
+.off-screen-menu a {
+    color: #222;
+}
+.onscreen {
+    display: none;
+}
+/* off-screen-menu */
+.off-screen-menu {
+    background-color:  #ffdcc4;
+    height: 100vh;
+    width: 50%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;    
+    justify-content: left;
+    text-align: left;
+    line-height: 80px;
+    font-size: 2rem;
+    transition: .3s ease;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 5rem;
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.5);  /* Added box shadow */
+}
+.off-screen-menu.active {
+    right: 0;
+}
+
+
+/* nav */
+nav {
+    padding: 1rem;
+    display: flex;
+    background-color: #ffffff;
+}
+
+
+
+/* ham menu */
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+}
+.ham-menu span {
+    height: 5px;
+    width: 70%;
+    background-color: #222;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: #222;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.logo {
+    height: 50px;
+}
+
+
+
+.hero-text {
+    padding-top: 2rem;
+    position: relative;
+   
+}
+
+.hero-text h1 {
+    padding-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-left: 2rem;
+    flex-wrap: wrap;
+    width: 150px;
+}
+
+
+.container {
+    
+    
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 5rem;
+
+}
+h2 {
+    text-align: left;
+    padding-bottom: 2rem;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+textarea {
+    height: 150px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    
+}
+button:hover {
+    background-color: #45a049;
+}
+.questions h2 {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.questions {
+    margin:1rem;
+    text-align: center;
+}
+
+/* Styling for the email form */
+.email-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.email-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+.email-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: #ffdcc4;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.submit-button {
+    width: 50%;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+   
+}
+
+.ft-nav {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    font-size: 10px;
+    background-color: #ffdcc4;
+    
+}
+
+.ft-nav li {
+    margin: 0.8rem;
+}
+
+.ft-nav li a{
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+}
+
+.ft-nav .logo {
+    width: 50px;
+    margin-left: 8px;
+}
+
+/* Media Query for Tablets */
+@media (min-width: 600px) and (max-width: 850px) {
+    /* Hero Text */
+    .banner {
+        background-color: #ffffff;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display:inline-flex;
+    }
+    .skip-link {
+        display: none;
+    }
+    .onscreen {
+        display: none;
+    }
+    .logo {
+        margin: 1rem;
+    }
+    .ham-menu span {
+        margin-right:2rem ;
+        margin-top: 1rem;
+        width: 80%;
+        z-index: 3;
+    }
+    .off-screen-menu {
+        padding-left: 6rem;
+        padding-top: 7rem;
+        z-index: 3;
+    }
+   
+   .hero-text {
+    padding-left: 3rem;
+    padding-top: 6rem;
+   }
+    .hero-text h1 {
+        font-size: 2.7rem; /* Increased font size for heading */
+        flex-wrap: wrap;
+        width: 305px;
+    }
+   
+    
+  
+
+   .ft-nav {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1rem;
+    background-color: #ffdcc4;
+    padding: 2rem;
+}
+
+.ft-nav li {
+    margin: 1rem;
+}
+
+.ft-nav li a{
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+}
+
+.ft-nav .logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+.ft-nav ul li p {
+    width: 100px;
+}
+
+}
+
+/* Media Query for Tablets */
+@media (min-width: 600px) and (max-width: 1368px) {
+    /* Hero Text */
+    nav {
+        background-color: #ffffff;
+    }
+    .onscreen {
+        display: none;
+    }
+    .logo {
+        margin: 1rem;
+    }
+    .ham-menu span {
+        margin-right:2rem ;
+        margin-top: 1rem;
+        width: 80%;
+        z-index: 3;
+    }
+    .off-screen-menu {
+        padding-left: 6rem;
+        padding-top: 7rem;
+        z-index: 3;
+    }
+    
+   .hero-text {
+    padding-left: 3rem;
+    padding-top: 6rem;
+   }
+    .hero-text h1 {
+        font-size: 4rem; /* Increased font size for heading */
+        flex-wrap: wrap;
+        width: 305px;
+    }
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;    
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+    gap: 3rem;
+    }
+    h2 {
+        text-align: left;
+        padding-bottom: 2rem;
+    }
+    
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    textarea {
+        height: 150px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 16px;
+        
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+   
+   .ft-nav {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1rem;
+    background-color: #ffdcc4;
+    padding: 2rem;
+    padding-left: 9rem;
+}
+
+.ft-nav li {
+    margin: 1rem;
+}
+
+.ft-nav li a{
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+}
+
+.ft-nav .logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+.ft-nav ul li p {
+    width: 100px;
+}
+
+}
+/* Media Query for Desktop */
+@media (min-width: 1025px)  {
+
+
+
+h2 {
+    font-size: 2rem;
+}
+
+    nav {
+        padding: 1rem;
+        display: flex;
+        background-color: #ffffff;
+    }
+
+    /* Basic skip link styling */
+.skip-link {
+    position: fixed;
+    top: 42rem;
+    right: 3rem;
+    background-color: #d0d0d0d1;
+    color: rgb(48, 48, 48);
+    padding: 15px 15px;
+    border-radius: 40px;
+    font-size: 20px;
+    z-index: 1000; /* Make sure it stays on top of other content */
+    text-decoration: none;
+    display: block;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Hide the skip link by default */
+  .skip-link:focus {
+    background-color: #121212; /* Change color on focus for better accessibility */
+    color: #ffffff;
+  }
+  
+  /* Show the skip link when it's focused (i.e., it gets activated by a keyboard user) */
+  .skip-link:focus {
+    display: block;
+  }
+
+
+    .logo {
+        margin: 1rem;
+    }
+    /* off-screen-menu */
+.off-screen-menu {
+    display:none;
+}
+.off-screen-menu.active {
+    display: none;
+}
+.ham-menu {
+    display: none;
+}
+/* nav */
+.onscreen {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    background-color: #ffffff;
+    padding: 2rem 3rem;  /* Adjust padding to fit better */
+    z-index: 4;
+    margin-top: -4rem;
+}
+
+/* Navigation items */
+.onscreen ul {
+    display: flex;  /* Make the navigation items align in a row */
+    justify-content: space-between;
+    width: 50%;
+    cursor: pointer;
+}
+
+.onscreen ul li {
+    margin: 0 1rem;  /* Space out items */
+}
+
+.onscreen ul li a {
+    color: #222;
+    font-size: 1rem;
+    text-transform: uppercase; /* Makes menu items look more formal */
+    font-weight: bold;
+    cursor: pointer;
+}
+.onscreen li a span {
+    margin-right: .51rem;
+}
+
+.onscreen ul li a:hover {
+    color: #e77b33;
+    transition: .3s;
+    padding: .8rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+   
+   .hero-text {
+    padding-left: 3rem;
+    padding-top: 6rem;
+   }
+    .hero-text h1 {
+        font-size: 3.5rem; /* Increased font size for heading */
+        flex-wrap: wrap;
+        width: 400px;
+    }
+
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;    
+            width: 70%;
+            margin-left: 15%;
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+        gap: 5rem;
+        }
+        h2 {
+            text-align: left;
+            padding-bottom: 2rem;
+        }
+        
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            
+        }
+        button:hover {
+            background-color: #6ddb72;
+        }
+       
+
+
+.discription {
+    display: flex;
+    padding: 1rem;
+}
+
+.text {
+    padding-left: 1.5rem;
+}
+
+.card .parah {
+    margin: 1rem;
+    color: #000000;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+   .ft-nav {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1rem;
+    background-color: #ffdcc4;
+    padding: 2rem;
+   cursor: pointer;
+   gap: 8rem;
+}
+
+
+
+.ft-nav li {
+    margin: 1rem;
+}
+
+.ft-nav li a{
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+}
+
+.ft-nav .logo {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+.ft-nav ul li p {
+    width: 200px;
+}
+    
+.email-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.email-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+.email-input {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 40px;
+    font-size: 1rem;
+    background-color: #ffdcc4;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.chat-sup {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.submit-button {
+    width: 50%;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+   
+}
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; 
+  }
+}
